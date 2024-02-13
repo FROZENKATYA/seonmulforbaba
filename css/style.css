@@ -1,0 +1,244 @@
+                                                                                    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fae1dd;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+}
+.valentines {
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+}
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f08080;
+    display: grid;
+    place-items: center;
+}
+.envelope::before {
+    content: '';
+    position: absolute;
+    width: 212px;
+    height: 212px;
+    background: #f08080;
+    transform: rotate(45deg);
+    top: -105px;
+    left: 44px;
+    border-radius: 30px 0 0 0;
+}
+.front {
+    position: absolute;
+    border-right: 180px solid #f4978e;
+    border-top: 95px solid transparent;
+    border-bottom: 100px solid transparent;
+    left: 120px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+.front::before {
+    position: absolute;
+    content: '';
+    border-left: 300px solid #fda996;
+    border-top: 195px solid transparent;
+    left: -120px;
+    top: -95px;
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    background: #fff;
+    border-radius: 2px;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #003049;
+    border-style: dashed;
+}
+.valentines:hover .card {
+    transform: translateY(-100px);
+}
+.card .text {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+    color: #003049;
+}
+.card .heart {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: red;
+    bottom: 20px;
+    transform: rotate(45deg);
+    border-radius: 50% 0 0 50%;
+}
+.card .heart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 0 50% 50% 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top;
+}
+.card .heart::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    right: -18px;
+
+}
+@keyframes up{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+} 
+.valentines::before {
+    content: '';
+    position: absolute;
+    width: 330px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 265px;
+    left: -15px;
+    animation: scale 3s linear infinite;
+}
+@keyframes scale{
+    0%, 100%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(.85);
+    }
+}
+
+.greetings{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.greetings > span{
+    animation: glow 0.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #ffff;
+        text-shadow: 0 0 12px #ee404c, 0 0 50px #ee404c, 0 0 100px #ee404c;
+    }
+    10%, 90%{
+        color: #fd2537;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(1){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(2){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .7s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .7s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(7){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(8){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(9){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(10){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(11){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(12){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(13){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(14){
+    animation-delay: .7s ;
+}
+.greetings > span:nth-child(15){
+    animation-delay: .7s ;
+}
+
+.description{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(244, 7, 165);
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: bottom;
+    }
+    .description{
+        font-size: 5px;
+    }
+    
+    .button a{
+        font-size: 10px;
+    }
+    .button {
+      margin: 5px 4px 6px 5px;
+
+    }
+}
